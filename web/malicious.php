@@ -305,7 +305,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<form action="#" method="post">
 							<div class="styled-input agile-styled-input-top">
 								<input type="text" name="name" required="">
-								<label>Name</label>
+								<label>Email</label>
 								<span></span>
 							</div>
 							<div class="styled-input">
