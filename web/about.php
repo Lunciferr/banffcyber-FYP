@@ -488,7 +488,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="inner_w3l_agile_grids">
 					<div class="col-md-3 team-grids">
 						<div class="thumbnail team-w3agile">
-							<img src="images/t1.jpg" class="img-responsive" alt="">
+							<img src="images/chorong.jpg" class="img-responsive" alt="">
 							<div class="social-icons team-icons right-w3l fotw33">
 							<div class="caption">
 								<h4>Joanna Vilken</h4>
