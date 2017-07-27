@@ -50,7 +50,7 @@ if(!empty($_GET["login"]))
 	{
 		session_start();
 		$_SESSION['name'] = $name[0];
-		header('Location: index.php?'.session_name()."=".session_id());
+		header('Location: index.php?');
 	}
 	else
 	{

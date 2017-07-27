@@ -100,10 +100,10 @@ if(!empty($_POST["submit2"]))
    	echo "Entered data successfully\n";
 mysql_close($conn);
 }
-if ($_SESSION['name']=="admin")
+/*if ($_SESSION['name']=="admin")
 {
-	header("Location: http://ec2-34-211-48-35.us-west-2.compute.amazonaws.com/web/admin.php");
-}
+	header("Location: admin.php");
+}*/
 ?>
 
 
