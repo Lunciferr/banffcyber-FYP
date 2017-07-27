@@ -51,7 +51,7 @@ if(!empty($_POST["login"]))
                 if ($conn->query($query) === TRUE)
                 {
                         echo "New record created successfully";
-			header("Location: http://ec2-34-211-48-35.us-west-2.compute.amazonaws.com/web/index.php");
+			header("Location:index.php");
                 }
                 else
                 {
@@ -150,10 +150,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="header" id="home">
 	<div class="container">
 		<ul>
+		    <?php if(!isset($_SESSION['name'])){ ?>
 		    <li> <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Sign In </a></li>
-			<li> <a href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Sign Up </a></li>
-			<li><i class="fa fa-phone" aria-hidden="true"></i> Call : 01234567898</li>
-			<li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@example.com">info@example.com</a></li>
+			<li> <a href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Sign Up </a></li> <?php } else{ ?> <li><div align="left: 150px";><a href="logout.php">Logout</a></div></li>
+			<?php }?>
+			<li><i class="fa fa-phone" aria-hidden="true"></i> Call : +65 6888 8888</li>
+			<li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@example.com">info@shopshoplah.com</a></li>
 		</ul>
 	</div>
 </div>
@@ -170,8 +172,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<!-- header-bot -->
 			<div class="col-md-4 logo_agile">
-				<h1><a href="index.php"><span>E</span>lite Shoppy <i class="fa fa-shopping-bag top_logo_agile_bag" aria-hidden="true"></i></a></h1>
-			</div>
+				<h1><a href="index.php"><span>S</span>hop<span>S</span>hoplah <i class="fa fa-shopping-bag top_logo_agile_bag" aria-hidden="true"></i></a></h1>
+			</div><div align=right><h2><br><i><?php if(!isset($_SESSION['name']) || empty($_SESSION['name'])){echo "Welcome, Guest!";} else { echo "Welcome, " . $_SESSION['name']; }?></i></br></h2></div>
         <!-- header-bot -->
 		<div class="col-md-4 agileits-social top_content">
 						<ul class="social-nav model-3d-0 footer-social w3_agile_social">
@@ -282,13 +284,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<div class="clearfix"></div>
 								</div>
 							</ul>
-					</li>
-					<li class="menu__item dropdown">
-					   <a class="menu__link" href="#" class="dropdown-toggle" data-toggle="dropdown">Short Codes <b class="caret"></b></a>
-								<ul class="dropdown-menu agile_short_dropdown">
-									<li><a href="icons.php">Web Icons</a></li>
-									<li><a href="typography.php">Typography</a></li>
-								</ul>
 					</li>
 					<li class=" menu__item"><a class="menu__link" href="contact.php">Contact</a></li>
 				  </ul>
@@ -589,7 +584,6 @@ echo "</table>";
 						<li><a href="mens.php">Men's Wear</a></li>
 						<li><a href="womens.php">Women's wear</a></li>
 						<li><a href="about.php">About</a></li>
-						<li><a href="typography.php">Short Codes</a></li>
 						<li><a href="contact.php">Contact</a></li>
 					</ul>
 				</div>
